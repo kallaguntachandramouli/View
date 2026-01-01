@@ -24,6 +24,46 @@ CREATE VIEW student_details AS
 SELECT student_id, first_name, last_name, email
 FROM students
 WHERE status = 'active';
+SELECT * FROM student_details;
+
+
+
+Table:
+A table is a collection of related data in a database, consisting of rows (records) and columns (fields).
+
+Key points:
+1.Stores data in a structured format
+2.Each row is a unique record
+3. Each column represents a field or attribute
+
+Syntax:
+CREATE TABLE table_name (
+  column1 datatype constraints,
+  column2 datatype constraints,
+  ...
+);
+
+
+
+
+Ex:
+show databases;
+use practices;
+show tables;
+
+CREATE TABLE students (
+  student_id INT PRIMARY KEY,
+  first_name VARCHAR(50),
+  last_name VARCHAR(50),
+  email VARCHAR(100)
+);
+
+
+INSERT INTO students (student_id, first_name, last_name, email) 
+VALUES (1, 'Chandra', 'Mouli', 'chandramouli.com');
+
+SELECT * FROM students;
+
 
 SELECT * FROM student_details;
 
