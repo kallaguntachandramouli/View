@@ -1,0 +1,30 @@
+View:
+A view is a virtual table based on the result-set of a SELECT statement.
+It does not store data physically but dynamically retrieves data from its underlying base tables every time it is queried, essentially acting as a stored query.
+
+Key points:
+1.Doesn't store data itself
+2. Fetches data from underlying tables
+3. Can simplify complex queries
+4. Provides data abstraction and security
+
+SYNTAX:
+Create a View
+CREATE VIEW view_name AS
+SELECT column1, column2
+FROM table_name
+WHERE condition;
+
+Ex:
+show databases;
+use practices;
+show tables;
+
+CREATE VIEW student_details AS
+SELECT student_id, first_name, last_name, email
+FROM students
+WHERE status = 'active';
+
+SELECT * FROM student_details;
+
+
